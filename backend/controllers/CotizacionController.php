@@ -213,7 +213,7 @@ class CotizacionController extends Controller
                         'positonY' => 'top',
                         'positonX' => 'right'
                         ]);
-                        return $this->redirect('index');
+                        return $this->redirect(['reporte', 'id' => $model->id]);
                     }
                 } catch (Exception $e) {
                     $transaction->rollBack();
